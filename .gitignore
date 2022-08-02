@@ -146,7 +146,7 @@ dmypy.json
 
 # Cython debug symbols
 cython_debug/
-/djangowallet/
+djangowallet/
 /templates/
 /manage.py
 .pypirc
