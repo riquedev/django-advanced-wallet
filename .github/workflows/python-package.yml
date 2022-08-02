@@ -43,4 +43,5 @@ jobs:
 
     - name: Test with django
       run: |
+        cd example_app
         python manage.py test
