@@ -29,10 +29,9 @@ jobs:
         python -m pip install --upgrade pip
         python -m pip install flake8
         if [ -f requirements.txt ]; then pip install -r requirements.txt; fi
-
     - name: Prepare database
       run: |
-        python manage.py migrate
+        python example_app\manage.py migrate
     - name: Lint with flake8
       run: |
         # stop the build if there are Python syntax errors or undefined names
@@ -45,4 +44,4 @@ jobs:
 
     - name: Test with django
       run: |
-        python manage.py test
+        python example_app\manage.py test
