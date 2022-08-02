@@ -1,3 +1,6 @@
+# THIS PACKAGE IS UNDER DEVELOPMENT, DO NOT USE IN PRODUCTION
+
+
 django-advanced-wallet
 ---
 <dl>

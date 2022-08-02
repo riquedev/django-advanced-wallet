@@ -1,8 +1,4 @@
-from django.db import models
-from django.db.models import ManyToManyRel
-from django.db.models.fields.related import RelatedField, OneToOneField
-from django.utils.translation import gettext_lazy as _
-from django.apps import apps
+from django.db.models.fields.related import OneToOneField
 
 
 def get_default_wallet():
