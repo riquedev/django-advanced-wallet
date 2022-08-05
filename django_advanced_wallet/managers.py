@@ -13,7 +13,7 @@ class WalletManager(OneToOneField):
     one_to_many = False
     one_to_one = True
 
-    def __init__(self, on_delete,
+    def __init__(self, verbose_name=None, on_delete=None,
                  to_field=None, **kwargs):
         to = "django_advanced_wallet.Wallet"
 
@@ -23,4 +23,4 @@ class WalletManager(OneToOneField):
         if "default" not in kwargs:
             kwargs["default"] = get_default_wallet
 
-        super().__init__(to, on_delete, to_field=to_field, **kwargs)
+        super().__init__(to, verbose_name=verbose_name, on_delete=on_delete, to_field=to_field, **kwargs)
