@@ -12,6 +12,7 @@ from .errors import (InsufficentBalance, NegativeAmount, NonCanceableOperation)
 from decimal import Decimal
 from django.contrib.contenttypes.models import ContentType
 
+
 def get_operation_id():
     return get_random_string(OPERATION_ID_LENGTH)
 
@@ -19,8 +20,10 @@ def get_operation_id():
 def get_wallet_id():
     return get_random_string(WALLET_ID_LENGTH)
 
+
 def get_wallet_operation_model():
     return apps.get_model(WALLET_OPERATION_MODEL)
+
 
 def get_wallet_model():
     return apps.get_model(WALLET_MODEL)
@@ -31,6 +34,7 @@ class WalletManager(models.Manager):
     def deposit(self, wallet: int | 'Wallet', amount: Decimal, name: str = _("Deposit"),
                 description: str = _("Simple deposit"),
                 related_operation: 'WalletOperation' = None, related_object: models.Model = None) -> 'WalletOperation':
+
         with transaction.atomic():
             pk = wallet
 
@@ -176,6 +180,13 @@ class AbstractWalletOperation(TimeStampedModel, models.Model):
     object_id = models.PositiveIntegerField(blank=True, null=True, db_index=True)
     content_object = GenericForeignKey('content_type', 'object_id')
 
+    def __str__(self):
+        return _('Operation #%(id)s | %(type)s | Value: %(value)s') % {
+            'id': self.pk,
+            'type': self.get_operation_type_display(),
+            'value': self.value
+        }
+
     def cancel_operation(self):
 
         if self.operation_type in [self.OperationType.TRANSFER_ORIGIN, self.OperationType.TRANSFER_DESTINATION]:
@@ -219,6 +230,12 @@ class AbstractWallet(TimeStampedModel, models.Model):
                                            default=Decimal(0), db_index=True, max_digits=WALLET_MAX_DIGITS)
 
     objects = WalletManager()
+
+    def __str__(self):
+        return _('Wallet #%(id)s | Balance: %(balance)s') % {
+            'id': self.pk,
+            'balance': self.balance
+        }
 
     def deposit(self, amount: Decimal, name: str = _("Deposit"), description: str = _("Simple deposit"),
                 related_operation: WalletOperation = None, related_object: models.Model = None) -> WalletOperation:
