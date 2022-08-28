@@ -5,7 +5,7 @@ with open("README.md", "r", encoding="utf-8") as fh:
 
 setuptools.setup(
     name="django_advanced_wallet",
-    version="0.0.1",
+    version="0.0.2",
     author="Henrique da Silva Santos",
     author_email="henrique.santos@4u360.com.br",
     description="An extensible wallet package for quick integration into your Django project.",
