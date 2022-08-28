@@ -10,6 +10,7 @@ class WalletModelAdmin(admin.ModelAdmin):
 
 @admin.register(get_wallet_operation_model())
 class WalletOperationModelAdmin(admin.ModelAdmin):
+    ordering = ('-created',)
 
     def has_delete_permission(self, request, obj=None):
         """

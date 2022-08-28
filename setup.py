@@ -12,7 +12,7 @@ setuptools.setup(
     long_description=long_description,
     long_description_content_type="text/markdown",
     license="Apache License 2.0",
-    url="https://github.com/riquedev/django-initials-avatar",
+    url="https://github.com/riquedev/django-advanced-wallet",
     keywords="wallet, framework, django",
     project_urls={
         "Bug Tracker": "https://github.com/riquedev/django-advanced-wallet/issues",
@@ -20,6 +20,7 @@ setuptools.setup(
     },
     install_requires=[
         'Django>=3.2.14',
+        'django_extensions'
     ],
     classifiers=[
         "Framework :: Django",
