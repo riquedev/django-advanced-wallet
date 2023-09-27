@@ -28,7 +28,13 @@ setuptools.setup(
         "Intended Audience :: Developers",
         "Programming Language :: Python :: 3"
     ],
-    packages=setuptools.find_packages(exclude=("djangowallet", "djangowallet.*", "tests", "example_app",)),
+    packages=setuptools.find_packages(exclude=(
+        "djangowallet",
+        "djangowallet.*",
+        "tests",
+        "example_app",
+        "example_app.*")
+    ),
     include_package_data=True,
     python_requires=">=3.7"
 )
