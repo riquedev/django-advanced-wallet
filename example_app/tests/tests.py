@@ -1,9 +1,13 @@
+import os
 from random import randrange
 from django.test import TestCase
 from django_advanced_wallet.models import Wallet
 from django_advanced_wallet.errors import NegativeAmount, InsufficentBalance
 from decimal import Decimal
-from example_app.tests.models import Account, RelatedObject
+if os.environ.get('DJANGO_EXAMPLE_APP') == "example_app.tests":
+    from example_app.tests.models import Account, RelatedObject
+else:
+    from tests.models import Account, RelatedObject
 
 
 class TestWalletRelation(TestCase):
