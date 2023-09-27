@@ -14,7 +14,7 @@ sys.path.insert(0, str(ROOT))
 project = 'django_advanced_wallet'
 copyright = '2023, Henrique da Silva Santos'
 author = 'Henrique da Silva Santos'
-release = '1.0.0'
+release = '0.0.2'
 
 # -- General configuration ---------------------------------------------------
 # https://www.sphinx-doc.org/en/master/usage/configuration.html#general-configuration

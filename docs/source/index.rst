@@ -8,15 +8,22 @@ Welcome to django_advanced_wallet's documentation!
 
 .. toctree::
    :maxdepth: 2
-   :caption: Contents:
 
    introduction
+
+.. toctree::
+   :maxdepth: 2
+   :caption: Usage:
    installation
    usage
    api_reference
    faq
 
-
+.. toctree::
+   :maxdepth: 2
+   :caption: Project Links:
+   .. _Source Code: https://github.com/riquedev/django-advanced-wallet
+   .. _Issue Tracker: https://github.com/riquedev/django-advanced-wallet/issues
 
 Indices and tables
 ==================
