@@ -3,7 +3,7 @@ from django.test import TestCase
 from django_advanced_wallet.models import Wallet
 from django_advanced_wallet.errors import NegativeAmount, InsufficentBalance
 from decimal import Decimal
-from .models import Account, RelatedObject
+from example_app.tests.models import Account, RelatedObject
 
 
 class TestWalletRelation(TestCase):
