@@ -25,14 +25,6 @@ To get started with ``django_advanced_wallet``, please refer to the package docu
 
 For detailed documentation and API reference, explore the sections and resources provided in this documentation.
 
-.. toctree::
-   :maxdepth: 2
-
-   installation
-   usage
-   customization
-   api_reference
-
 ``django_advanced_wallet`` empowers you to simplify the implementation of complex financial features, reduce development time, and ensure the reliability and accuracy of financial operations within your Django application.
 
 .. note::
