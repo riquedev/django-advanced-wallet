@@ -21,7 +21,7 @@ release = '0.0.2'
 
 extensions = [
     'sphinx.ext.autodoc',
-    "sphinxcontrib_django",
+    "sphinxcontrib_django"
 ]
 
 autodoc_mock_imports = ['django']
