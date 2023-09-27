@@ -1,0 +1,18 @@
+[build-system]
+requires = ["setuptools>=42", "wheel"]
+build-backend = "setuptools.build_meta"
+
+[tool.poetry]
+name = "django_advanced_wallet"
+version = "0.0.2"
+authors = ["Henrique da Silva Santos <henrique.santos@4u360.com.br>"]
+description = "An extensible wallet package for quick integration into your Django project."
+license = "Apache License 2.0"
+homepage = "https://github.com/riquedev/django-advanced-wallet"
+keywords = ["wallet", "framework", "django"]
+readme = "README.md"
+
+[tool.poetry.dependencies]
+python = ">=3.7"
+django = ">=3.2.14"
+django-extensions = "*"

@@ -1,4 +1,4 @@
-Introduction to the ``django_advanced_wallet`` Package
+Introduction
 ==================================================================
 
 The ``django_advanced_wallet`` package is a powerful Django extension designed to simplify and enhance the management of digital wallets within your Django project. Digital wallets play a crucial role in various applications, including e-commerce platforms, fintech solutions, or any system that requires secure and flexible handling of financial transactions.
