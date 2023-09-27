@@ -1,8 +1,8 @@
 # THIS PACKAGE IS UNDER DEVELOPMENT, DO NOT USE IN PRODUCTION
 
-
 django-advanced-wallet
----
+----------------------
+
 <dl>
     <table>
       <tr>
@@ -11,14 +11,15 @@ django-advanced-wallet
       </tr> 
       <tr> 
         <th>Django Packages</th>
-        <td><a href="https://djangopackages.org/packages/p/django-initials-avatar/">packages/django-initials-avatar</a></td>
+        <td><a href="https://djangopackages.org/packages/p/django-advanced-wallet/">packages/django-advanced-wallet</a></td>
       </tr>
     </table>
 </dl>
 
-[!["Buy Me A Coffee"](https://www.buymeacoffee.com/assets/img/custom_images/orange_img.png)](https://www.buymeacoffee.com/riquedevbr)
+[![](https://www.buymeacoffee.com/assets/img/custom_images/orange_img.png)](https://www.buymeacoffee.com/riquedevbr)
 
 ## Installing
+
 First add the application to your Python path. The easiest way is to use pip:
 
 ```shell
