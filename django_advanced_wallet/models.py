@@ -21,11 +21,11 @@ def get_wallet_id():
     return get_random_string(WALLET_ID_LENGTH)
 
 
-def get_wallet_operation_model():
+def get_wallet_operation_model() -> 'AbstractWalletOperation':
     return apps.get_model(WALLET_OPERATION_MODEL)
 
 
-def get_wallet_model():
+def get_wallet_model() -> 'AbstractWallet':
     return apps.get_model(WALLET_MODEL)
 
 
