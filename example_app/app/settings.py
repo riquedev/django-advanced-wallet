@@ -1,3 +1,4 @@
+import os
 from pathlib import Path
 
 # Build paths inside the project like this: BASE_DIR / 'subdir'.
@@ -17,7 +18,6 @@ ALLOWED_HOSTS = []
 
 
 # Application definition
-
 INSTALLED_APPS = [
     'django.contrib.admin',
     'django.contrib.auth',
@@ -26,7 +26,7 @@ INSTALLED_APPS = [
     'django.contrib.messages',
     'django.contrib.staticfiles',
     'django_advanced_wallet.apps.DjangoAdvancedWalletConfig',
-    "example_app.tests"
+    os.environ.get('DJANGO_EXAMPLE_APP', "example_app.tests")
 ]
 
 MIDDLEWARE = [
