@@ -10,7 +10,6 @@ from .app_settings import (WALLET_ID_LENGTH, WALLET_DECIMAL_PLACES, OPERATION_ID
                            ALLOW_NEGATIVE_BALANCE, WALLET_MODEL, WALLET_OPERATION_MODEL)
 from .errors import (InsufficentBalance, NegativeAmount, NonCanceableOperation)
 from decimal import Decimal
-from django.contrib.contenttypes.models import ContentType
 
 
 def get_operation_id():
