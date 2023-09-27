@@ -10,9 +10,9 @@ from pathlib import Path
 import django
 
 ROOT = Path(__file__).parent.parent.parent
-sys.path.insert(0, str(ROOT / 'django_advanced_wallet'))
 os.environ.setdefault('DJANGO_SETTINGS_MODULE', 'example_app.app.settings')
 django.setup()
+sys.path.insert(0, str(ROOT / 'django_advanced_wallet'))
 
 project = 'django_advanced_wallet'
 copyright = '2023, Henrique da Silva Santos'
