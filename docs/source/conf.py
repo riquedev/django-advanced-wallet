@@ -7,12 +7,9 @@
 # https://www.sphinx-doc.org/en/master/usage/configuration.html#project-information
 import sys, os
 from pathlib import Path
-import django
 
 ROOT = Path(__file__).parent.parent.parent
-os.environ.setdefault('DJANGO_SETTINGS_MODULE', 'example_app.app.settings')
-django.setup()
-sys.path.insert(0, str(ROOT / 'django_advanced_wallet'))
+sys.path.insert(0, str(ROOT))
 
 project = 'django_advanced_wallet'
 copyright = '2023, Henrique da Silva Santos'
@@ -24,6 +21,7 @@ release = '1.0.0'
 
 extensions = [
     'sphinx.ext.autodoc',
+    "sphinxcontrib_django",
 ]
 
 autodoc_mock_imports = ['django']
@@ -38,3 +36,8 @@ exclude_patterns = [
 
 html_theme = 'furo'
 html_static_path = ['_static']
+
+django_settings = "example_app.app.settings"
+django_show_db_tables = True
+django_show_db_tables_abstract = True
+django_choices_to_show = 10

@@ -27,7 +27,7 @@ jobs:
       - name: Install dependencies
         run: |
           pip install -r requirements.txt
-          pip install sphinx furo myst_parser
+          pip install sphinx furo myst_parser sphinxcontrib-django
       - name: Sphinx build
         run: |
           sphinx-build docs/source/ ./_build

@@ -26,7 +26,7 @@ INSTALLED_APPS = [
     'django.contrib.messages',
     'django.contrib.staticfiles',
     'django_advanced_wallet.apps.DjangoAdvancedWalletConfig',
-    "tests"
+    "example_app.tests"
 ]
 
 MIDDLEWARE = [
