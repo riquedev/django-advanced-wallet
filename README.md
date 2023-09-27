@@ -26,13 +26,15 @@ First add the application to your Python path. The easiest way is to use pip:
 pip install django-advanced-wallet
 ```
 
-Check the [Release History](https://pypi.org/project/django-initials-avatar/#history) tab on the PyPI package page for
+Check the [Release History](https://pypi.org/project/django-advanced-wallet/#history) tab on the PyPI package page for
 pre-release versions. These can be downloaded by specifying the version.
 
 You can also install by downloading the source and running:
 
 ```shell
-python setup.py install
+python -m pip install build
+python -m build
+python -m pip install .
 ```
 
 ## Configuring
